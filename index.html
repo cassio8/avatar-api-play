@@ -1,0 +1,56 @@
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" 			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" 	content="telephone=no">
+	<title>Avatar characters</title>
+
+	<link rel="shortcut icon" href="https://i.pinimg.com/originals/dd/05/9e/dd059ef402eabd1f5c01b9024010011b.png">
+
+	<link href="fontello/css/fontello.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="css/monalisa.min.css">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+	<div id="app" v-cloak>
+		<div class="container">
+			<div class="Header">
+				<h1 class="_h2">Avatar characters</h1>
+				<input type="search" class="search" placeholder="Search">
+			</div>
+
+			<div class="loader" v-show="loader">
+				<img src="https://media2.giphy.com/media/yWmGNKOfnZtKC2a9iv/giphy.gif">
+				<b>Loading...</b>
+			</div>
+
+			<div class="Row _gutters list">
+				<div class="Card col _col-3" v-for="card in cards">
+					<div class="imagem" v-bind:style="{ backgroundImage: 'url(' + card.photoUrl + ')' }" v-if="card.photoUrl"></div>
+					<div class="imagem" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Aire%3BAvatar_The_Last_Airbender.svg/983px-Aire%3BAvatar_The_Last_Airbender.svg.png)" v-else></div>
+					
+					<div class="bottom">
+						<h3 class="name">{{ card.name }}</h3>
+						
+						<b v-if="card.affiliation">Affiliation</b>
+						<span v-if="card.affiliation" class="affiliation">{{ card.affiliation }}</span>
+					</div>
+					<a :href="card.photoUrl" class="open-popup"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<a href="#" class="scroll"><i class="icon-up"></i></a>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

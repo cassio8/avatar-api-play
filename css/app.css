@@ -1,0 +1,169 @@
+[v-cloak] { display: none }
+
+
+body, h1, h2, h3, h4, h5, h6,
+p, span, b, ul, li, div {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	margin: 60px 0;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	width: 1170px;
+}
+
+.Header {
+	margin-bottom: 60px;
+}
+
+.Header input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 500px;
+	border-radius: 50px;
+	border-color: #d88e40;
+}
+
+.Header input:focus {
+	border-color: #a46119;
+}
+
+.loader {
+	margin: 200px auto 0;
+	max-width: 140px;
+	text-align: center;
+    z-index: 100;
+}
+
+.Card {
+	margin: 0 0 2%;
+	padding: 20px;
+	background: linear-gradient(180deg, rgba(216,142,65,1) 13%, rgba(158,91,21,1) 100%);
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	transition: 300ms;
+}
+
+.Card:hover {
+	transform: scale(1.05);
+}
+
+.Card a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.Card .imagem {
+	width: 100%;
+	height: 200px;
+	border-radius: 10px;
+	background-size: cover;
+	background-position: center;
+}
+
+.Card .bottom {
+	text-align: center;
+}
+
+.Card .bottom h3 {
+	margin: 15px 0;
+	color: #fff;
+}
+
+.Card .bottom b {
+	display: block;
+	color: #fff;
+}
+
+.Card .bottom span {
+	color: #fff;
+	font-size: 12px;
+}
+
+.scroll {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	background-color: #d88e40;
+	border-radius: 50%; 
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+.scroll:hover {
+	color: #fff;
+	background-color: #519cfd;
+}
+
+.scroll i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1200px) {
+	.container {
+		width: 960px;
+	}
+
+	.Row {
+		zoom: 85%;
+	}
+}
+
+@media only screen and (max-width: 996px) {
+	.container {
+		width: 740px;
+	}
+
+	.Header input {
+		width: 350px;
+	}
+
+	.Row {
+		zoom: 100%;
+	}
+
+	.Row._gutters > ._col-3 {
+		width: calc(33.33333% - 2%);
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 90%;
+	}
+
+	.Header input {
+		position: relative;
+		width: 100%;
+	}
+
+	.loader {
+		margin: 80px auto 0;
+	}
+
+	.Row._gutters > ._col-3 {
+		margin: 0 auto 20px;
+		width: 250px;
+	}
+}
